@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrum Edukacyjne</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        footer {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 10px 20px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .pastel-button {
+            background-color: #c3e1e8;
+            border: none;
+            padding: 10px 20px;
+            color: #333;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .pastel-button:hover {
+            background-color: #a9d6de;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Centrum Edukacyjne</h1>
+        <nav>
+            <a href="#about">O mnie</a>
+            <a href="#webinars">Webinary</a>
+            <a href="#blog">Blog/Wideo</a>
+            <a href="#contact">Kontakt</a>
+            <a href="#leads">Zostaw Lead</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>O mnie</h2>
+            <p>Witaj w naszym Centrum Edukacyjnym. Tutaj znajdziesz profesjonalne webinary prowadzone przez ekspertów z różnych dziedzin.</p>
+        </div>
+    </section>
+
+    <section id="webinars">
+        <div class="container">
+            <h2>Zapis na Webinary</h2>
+            <div class="form-container">
+                <form action="/submit-webinar" method="post">
+                    <label for="name">Imię:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="webinar">Wybierz Webinar:</label><br>
+                    <select id="webinar" name="webinar" required>
+                        <option value="webinar1">Webinar 1</option>
+                        <option value="webinar2">Webinar 2</option>
+                        <option value="webinar3">Webinar 3</option>
+                    </select><br><br>
+                    <button type="submit" class="pastel-button">Zapisz się</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <div class="container">
+            <h2>Blog/Wideo z poprzednich webinarów</h2>
+            <p>Znajdziesz tutaj nagrania z poprzednich webinarów oraz ciekawe artykuły.</p>
+            <!-- Przykładowe nagrania -->
+            <div>
+                <h3>Webinar 1: Wprowadzenie do tematu</h3>
+                <video width="600" controls>
+                    <source src="webinar1.mp4" type="video/mp4">
+                    Twoja przeglądarka nie obsługuje elementu wideo.
+                </video>
+            </div>
+            <div>
+                <h3>Webinar 2: Zaawansowane techniki</h3>
+                <video width="600" controls>
+                    <source src="webinar2.mp4" type="video/mp4">
+                    Twoja przeglądarka nie obsługuje elementu wideo.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <div class="form-container">
+                <form action="/submit-contact" method="post">
+                    <label for="name">Imię:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="message">Wiadomość:</label><br>
+                    <textarea id="message" name="message" required></textarea><br><br>
+                    <button type="submit" class="pastel-button">Wyślij</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="leads">
+        <div class="container">
+            <h2>Zostaw Lead</h2>
+            <div class="form-container">
+                <form action="/submit-lead" method="post">
+                    <label for="name">Imię:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="interest">Czym jesteś zainteresowany/a?</label><br>
+                    <input type="text" id="interest" name="interest" required><br><br>
+                    <button type="submit" class="pastel-button">Zostaw Lead</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Centrum Edukacyjne. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+</body>
+</html>
